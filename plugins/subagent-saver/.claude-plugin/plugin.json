@@ -1,6 +1,6 @@
 {
   "name": "subagent-saver",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Search subagents (Explore) that were given no model of their own run on a cheaper one instead of the main model. An explicit model, forks, teammates and plugin agents stay untouched.",
   "author": {
     "name": "Lupus Malus Deviant"
