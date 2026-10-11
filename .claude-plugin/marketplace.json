@@ -1,0 +1,49 @@
+{
+  "name": "claude-mods",
+  "owner": {
+    "name": "Lupus Malus Deviant"
+  },
+  "description": "Single Claude Code mods from the Mod Box, each installable on its own.",
+  "plugins": [
+    {
+      "name": "cache-meter",
+      "source": "./plugins/cache-meter",
+      "description": "Band: time left on the warm cache, hit rate, context as weather, plan limits, compact and keep-warm buttons; stops one send to a cold cache and names its cost (Cache Tax runs inside)."
+    },
+    {
+      "name": "subagent-saver",
+      "source": "./plugins/subagent-saver",
+      "description": "Search subagents (Explore) that were given no model of their own run on a cheaper one instead of the main model. An explicit model, forks, teammates and plugin agents stay untouched."
+    },
+    {
+      "name": "secret-guard",
+      "source": "./plugins/secret-guard",
+      "description": "Stops before Claude writes API keys, tokens, private keys or a non-ignored .env into files, git add or commits. Exceptions for test keys and example files: /secret-allow."
+    },
+    {
+      "name": "ci-watch",
+      "source": "./plugins/ci-watch",
+      "description": "After every git push, follows the GitHub Actions runs (via gh) until they finish; with an open pull request (also after gh pr create, or /ci pr <nr>) all its checks, other CI included, and whether it is ready to merge. On red it shows the failed step log."
+    },
+    {
+      "name": "sign-guard",
+      "source": "./plugins/sign-guard",
+      "description": "Spots Windows builds (cargo --release, dotnet publish, go build, pyinstaller, tauri, electron-builder, msbuild) and signs the new .exe/.msi/.msix with your own signing script."
+    },
+    {
+      "name": "handoff",
+      "source": "./plugins/handoff",
+      "description": "/handoff writes a handoff note to .claude/handoff.local.md; a new session offers to continue from it."
+    },
+    {
+      "name": "heads-up",
+      "source": "./plugins/heads-up",
+      "description": "A second model reads longer answers and raises one easily missed but important point."
+    },
+    {
+      "name": "blast-radius",
+      "source": "./plugins/blast-radius",
+      "description": "Holds risky shell commands (rm -rf, git reset --hard, git clean, force push, migrations) and shows what they would hit."
+    }
+  ]
+}
