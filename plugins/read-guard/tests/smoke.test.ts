@@ -19,7 +19,7 @@ describe('standalone', () => {
     on('session.start', (_$: any, e: any) => ({ sessionId: 's', cwd: e.cwd }))
     on('ui.render', ($: any, e: any) => $.ui.resolve(e).Text({ children: '' }))
     await $.session.start({ surface: 'terminal', isInteractive: true, cwd: '/w' })
-    const ui = await $.ui.mount({ plugin: 'heads-up', surface: 'terminal', component: 'AbovePrompt', props: { hasSurvey: false, isWorking: false, maxRows: 10, bodyColumns: 120 } })
+    const ui = await $.ui.mount({ plugin: 'read-guard', surface: 'terminal', component: 'AbovePrompt', props: { hasSurvey: false, isWorking: false, maxRows: 10, bodyColumns: 120 } })
     expect(await ui.drawn()).toBeDefined()
   })
 })

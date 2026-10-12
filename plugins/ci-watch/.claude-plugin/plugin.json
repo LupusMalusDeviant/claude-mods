@@ -1,6 +1,6 @@
 {
   "name": "ci-watch",
-  "version": "0.4.1",
+  "version": "0.5.0",
   "description": "After every git push, follows the GitHub Actions runs (via gh) until they finish; with an open pull request (also after gh pr create, or /ci pr <nr>) all its checks, other CI included, and whether it is ready to merge. On red it shows the failed step log.",
   "author": {
     "name": "Lupus Malus Deviant"
@@ -41,6 +41,27 @@
       ],
       "title": "CI Watch: sound",
       "description": "on: a short sound when the runs are green or red (Windows: system sounds)."
+    },
+    "notify": {
+      "type": "string",
+      "default": "red",
+      "options": [
+        "off",
+        "red",
+        "always"
+      ],
+      "title": "CI Watch: system notification",
+      "description": "When a watched run ends, through your notification channel (preferredNotifChannel): off, only red, or always. Claude Code notifies at the end of a turn; CI usually ends later."
+    },
+    "prOnDesktop": {
+      "type": "string",
+      "default": "app",
+      "options": [
+        "app",
+        "box"
+      ],
+      "title": "CI Watch: PR checks in the desktop app",
+      "description": "app: in the desktop app a new PR is watched by the app itself (CI bar, auto-fix), so nothing is reported twice; pushes are still watched here. box: CI Watch follows the PR as in the terminal."
     },
     "language": {
       "type": "string",

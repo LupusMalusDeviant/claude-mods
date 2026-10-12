@@ -29,6 +29,8 @@ Set them in `/config` (or when installing).
 | `intervalSec` | `20` | How often gh is asked for the state of the runs. |
 | `onRed` | `both` | pane: open the log pane. prompt: put an analysis request into the prompt (not sent). both. |
 | `sound` | `off` | on: a short sound when the runs are green or red (Windows: system sounds). |
+| `notify` | `red` | When a watched run ends, through your notification channel (preferredNotifChannel): off, only red, or always. Claude Code notifies at the end of a turn; CI usually ends later. |
+| `prOnDesktop` | `app` | app: in the desktop app a new PR is watched by the app itself (CI bar, auto-fix), so nothing is reported twice; pushes are still watched here. box: CI Watch follows the PR as in the terminal. |
 | `language` | `en` | Language of the texts this mod shows and writes. |
 
 ## License

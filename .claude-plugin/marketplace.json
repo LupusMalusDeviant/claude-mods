@@ -13,12 +13,22 @@
     {
       "name": "subagent-saver",
       "source": "./plugins/subagent-saver",
-      "description": "Search subagents (Explore) that were given no model of their own run on a cheaper one instead of the main model. An explicit model, forks, teammates and plugin agents stay untouched."
+      "description": "Search subagents (Explore) that were given no model of their own run on a cheaper one instead of the main model. An explicit model, forks, teammates and plugin agents stay untouched. With Claude Code's own CLAUDE_CODE_SUBAGENT_MODEL set (for all subagents), the mod stays out."
+    },
+    {
+      "name": "read-guard",
+      "source": "./plugins/read-guard",
+      "description": "Holds a whole-file Read (no offset/limit) of a file above the limit, a lockfile, minified code or a source map, and the same via cat, type or Get-Content in the shell; tells Claude the size, a token estimate and a better way (Grep, offset/limit). A second try at the same file goes through. Claude Code itself stops only at about 25,000 tokens."
     },
     {
       "name": "secret-guard",
       "source": "./plugins/secret-guard",
       "description": "Stops before Claude writes API keys, tokens, private keys or a non-ignored .env into files, git add or commits. Exceptions for test keys and example files: /secret-allow."
+    },
+    {
+      "name": "package-guard",
+      "source": "./plugins/package-guard",
+      "description": "Before Claude installs or runs a package (npm, pnpm, yarn, bun, npx, pip, uv, poetry, pipx, cargo), asks the public registry about it. Holds the command when the package does not exist (a made-up name), is under 14 days old, or looks like a well-known package and is young or thin (typosquatting). Allow in the band or with /pkg-allow."
     },
     {
       "name": "ci-watch",
@@ -36,9 +46,9 @@
       "description": "/handoff writes a handoff note to .claude/handoff.local.md; a new session offers to continue from it."
     },
     {
-      "name": "heads-up",
-      "source": "./plugins/heads-up",
-      "description": "A second model reads longer answers and raises one easily missed but important point."
+      "name": "pet",
+      "source": "./plugins/pet",
+      "description": "A little cardboard box on the Windows desktop, always on top, that says in a speech bubble what Claude is doing: the file it reads or changes, the command that runs, what a guard held, and a short summary at the end of a turn. Drag it anywhere, right-click for quiet time. Built once with the C# compiler that ships with Windows and signed with the Sign Guard script when one is set. /pet shows it, /pet stop sends it off."
     },
     {
       "name": "blast-radius",

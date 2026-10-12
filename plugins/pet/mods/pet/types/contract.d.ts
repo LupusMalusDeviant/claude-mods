@@ -9,10 +9,8 @@ export type ModUsage = {
   unpriced: number
 }
 
-export type HeadsUp = { turnId: string; text: string }
-
 declare module 'claude-code' {
   interface PluginState {
-    'heads-up': { usage: Record<string, ModUsage>; note: HeadsUp | null }
+    'pet': { usage: Record<string, ModUsage> }
   }
 }

@@ -1,9 +1,9 @@
-// Entry of the standalone Heads-up (You Should Know). The mod hands its display to a band (in the Mod Box the
+// Entry of the standalone Package Guard. The mod hands its display to a band (in the Mod Box the
 // band manager draws it); here this hook, registered first and so the outermost, draws it below
 // whatever else is above the prompt.
 import type { Register } from 'claude-code'
 
-import { register as inner } from '../mods/heads-up/hooks/register'
+import { register as inner } from '../mods/package-guard/hooks/register'
 import { openBand, takeBand } from '../mods/settings/hooks/band'
 
 export const register: Register = (on, options) => {
