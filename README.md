@@ -1,4 +1,14 @@
-# Claude Code mods
+# Claude Code mods (moved to mod-box)
+
+> [!IMPORTANT]
+> **Moved to [LupusMalusDeviant/mod-box](https://github.com/LupusMalusDeviant/mod-box).** All mods from here (Cache Meter, Subagent Saver, Read Guard, Secret Guard, Screen Mask, Package Guard, CI Watch, Sign Guard, Handoff Note, Desktop Pet, Blast Radius) are now listed in the mod-box marketplace, one by one and in the box. This repo gets no more updates.
+>
+> ```bash
+> claude plugin marketplace add LupusMalusDeviant/mod-box
+> claude plugin install <name>@mod-box
+> ```
+>
+> Already installed from here? `claude plugin uninstall <name>@claude-mods`, then install it from mod-box as above. Please star [mod-box](https://github.com/LupusMalusDeviant/mod-box) instead.
 
 Single Claude Code mods, each installable on its own. They are the standalone versions of mods from the [Mod Box](https://github.com/LupusMalusDeviant/mod-box), which bundles them (and more) with one window to switch, configure and profile them. Take the box if you want several; take a mod from here if you want just that one.
 
